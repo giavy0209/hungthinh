@@ -1,0 +1,71 @@
+<%- include('../components/head') %>
+
+    <body data-new-gr-c-s-check-loaded="14.1055.0" data-gr-ext-installed="" class="vsc-initialized">
+        <div class="page animated" style="animation-duration: 500ms;">
+            <%- include('../components/header') %>
+                <section class="breadcrumbs-custom-inset">
+                    <div class="breadcrumbs-custom context-dark">
+                        <div class="container">
+                            <h2 class="breadcrumbs-custom-title">Dự án </h2>
+
+                        </div>
+                        <div class="box-position"
+                            style="background-image: url(https://www.hungthinhland.com.vn/images/bg_duan.jpg);">
+                        </div>
+                    </div>
+                </section>
+                <div class="container">
+                    <section class="section section-sm bg-default" style="position:relative; text-align: left">
+                        <div class="container">
+                            <div class="oh">
+                                <div class="title-decoration-lines">
+                                    <h6 class="title-decoration-lines-content green">
+                                        <%=newsDetail.title%>
+                                    </h6>
+                                </div>
+                            </div>
+                            <p style="text-align:center"><img alt="<%=newsDetail.title%>"
+                                    src="<%=newsDetail.thumbnail%>" style="width:100%"></p>
+
+                            <p>&nbsp;</p>
+
+                            <%-newsDetail.content%>
+                        </div>
+
+                        <div class="oh">
+                            <div class="title-decoration-lines wow slideInUp" data-wow-delay="0s"
+                                style="visibility: visible; animation-delay: 0s; animation-name: slideInUp;">
+                                <h6 class="title-decoration-lines-content green">Dự án khác</h6>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <%allNews.forEach(el=>{%>
+                                <div class="col-sm-9 col-md-6 col-lg-5 col-xl-4 wow fadeInLeft" data-wow-delay="0"
+                                    style="visibility: visible; animation-name: fadeInLeft;">
+                                    <!-- Post Creative-->
+                                    <article class="post post-creative">
+                                        <div class="post-creative-header"> </div>
+                                        <a class="post-creative-figure"
+                                            href="/du-an/<%=el.categories.slug%>/<%=el.slug%>"><img
+                                                src="<%=el.thumbnail%>" alt="<%=el.title%>" width="370"
+                                                height="267"></a>
+                                        <div class="post-creative-footer">
+                                            <h5 class="post-creative-title"><a
+                                                    href="/du-an/<%=el.categories.slug%>/<%=el.slug%>">
+                                                    <%=el.title%>
+                                                </a>
+                                            </h5>
+                                        </div>
+                                    </article>
+                                </div>
+                                <%})%>
+
+                        </div>
+                </div>
+                </section>
+        </div>
+
+        </div>
+        <%- include('../components/footer') %>
+    </body>
+    <%- include('../components/script') %>

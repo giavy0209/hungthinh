@@ -1,0 +1,259 @@
+<%- include('../components/head') %>
+
+  <body data-new-gr-c-s-check-loaded="14.1055.0" data-gr-ext-installed="" class="vsc-initialized">
+    <div class="page animated" style="animation-duration: 500ms;">
+      <%- include('../components/header') %>
+
+        <%- include('../components/banner') %>
+          <section class="section section-sm bg-default bg_dark">
+            <div class="container">
+              <div class="oh wow slideInUp" data-wow-delay="0s"
+                style="visibility: visible; animation-delay: 0s; animation-name: slideInUp;">
+                <div class="title-decoration-lines">
+                  <h6 class="title-decoration-lines-content green">Dự án mới nhất</h6>
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                <%newProject.forEach(el=> {%>
+                  <div class="col-sm-9 col-md-6 col-lg-5 col-xl-4 wow fadeInLeft" data-wow-delay="0.5s"
+                    style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                    <article class="post post-creative">
+                      <div class="post-creative-header"> </div>
+                      <a class="post-creative-figure" href="/tin-tuc/<%=el.title%>"><img src="<%=el.thumbnail%>"
+                          alt="BIEN HOA UNIVERSE COMPLEX" width="370" height="267"></a>
+                      <div class="post-creative-footer">
+                        <h5 class="post-creative-title"><a href="/tin-tuc/<%=el.title%>">
+                            <%=el.title%>
+                          </a></h5>
+                      </div>
+                    </article>
+                  </div>
+                  <%})%>
+              </div>
+              <a class="button button-secondary button-ujarak wow fadeInUp"
+                href="https://www.hungthinhland.com.vn/projects.html">xem tất cả</a>
+            </div>
+          </section>
+
+          <section class="section section-sm bg-default">
+            <div class="container">
+              <div class="oh">
+                <div class="title-decoration-lines wow slideInDown" data-wow-delay="0s">
+                  <h6 class="title-decoration-lines-content green">Tin tức mới</h6>
+                </div>
+              </div>
+              <div class="tabs-custom tabs-horizontal tabs-corporate wow slideInUp" data-wow-delay="0s" id="tabs-5">
+                <div class="tab-content tab-content1">
+
+                  <div class="tab-pane fade active show" id="tabs-5-1">
+                    <div class="row row-30  wow slideInUp" data-wow-delay="0s">
+                      <div class="col-md-6 col-lg-6 col-xl-6">
+
+                        <article class="post post-classic"> <a class="post-classic-figure"
+                            href="/tin-tuc/<%=newNews[0]?.slug%>"><img
+                              src="/<%=newNews[0]?.thumbnail%>"
+                              width="600" height="400"></a>
+                          <h4 class="post-classic-title post-classic-title-home"><a
+                              href="/tin-tuc/<%=newNews[0]?.slug%>"><%=newNews[0]?.title%></a> </h4>
+                          <p><%=newNews[0]?.meta%></p>
+                        </article>
+                      </div>
+
+
+                      <div class="col-md-6 col-lg-6 col-xl-6">
+                        <div class="row">
+                          <div class="col-md-6 col-lg-6 col-xl-6">
+                            <article class="post post-classic">
+                              <a class="post-classic-figure"
+                                href="/tin-tuc/<%=newNews[1]?.slug%>"><img
+                                  src="<%=newNews[1]?.thumbnail%>"
+                                  width="900"
+                                  height="600"></a>
+                              <div class="post-classic-panel group-middle justify-content-start">
+                              </div>
+                              <h4 class="post-classic-title"><a
+                                  href="/tin-tuc/<%=newNews[1]?.slug%>"><%=newNews[1]?.title%></a> </h4>
+                            </article>
+                          </div>
+                          <div class="col-md-6 col-lg-6 col-xl-6">
+                            <article class="post post-classic">
+                              <a class="post-classic-figure"
+                                href="/tin-tuc/<%=newNews[2]?.slug%>"><img
+                                  src="<%=newNews[2]?.thumbnail%>"
+                                  width="900"
+                                  height="600"></a>
+                              <div class="post-classic-panel group-middle justify-content-start">
+                              </div>
+                              <h4 class="post-classic-title"><a
+                                  href="/tin-tuc/<%=newNews[2]?.slug%>"><%=newNews[2]?.title%></a> </h4>
+                            </article>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6 col-lg-6 col-xl-6">
+                            <article class="post post-classic">
+                              <a class="post-classic-figure"
+                                href="/tin-tuc/<%=newNews[3]?.slug%>"><img
+                                  src="<%=newNews[3]?.thumbnail%>"
+                                  width="900"
+                                  height="600"></a>
+                              <div class="post-classic-panel group-middle justify-content-start">
+                              </div>
+                              <h4 class="post-classic-title"><a
+                                  href="/tin-tuc/<%=newNews[3]?.slug%>"><%=newNews[3]?.title%></a> </h4>
+                            </article>
+                          </div>
+                          <div class="col-md-6 col-lg-6 col-xl-6">
+                            <article class="post post-classic">
+                              <a class="post-classic-figure"
+                                href="/tin-tuc/<%=newNews[4]?.slug%>"><img
+                                  src="<%=newNews[4]?.thumbnail%>"
+                                  width="900"
+                                  height="600"></a>
+                              <div class="post-classic-panel group-middle justify-content-start">
+                              </div>
+                              <h4 class="post-classic-title"><a
+                                  href="/tin-tuc/<%=newNews[4]?.slug%>"><%=newNews[4]?.title%></a> </h4>
+                            </article>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+
+
+                    </div>
+                  </div>
+
+
+
+
+                  <div class="tab-pane fade" id="tabs-5-2">
+                    <div class="row row-30">
+                      <div class="col-md-6 col-lg-6 col-xl-6">
+
+                        <!-- Team Classic-->
+                        <article class="post post-classic"> <a class="post-classic-figure"
+                            href="https://www.hungthinhland.com.vn/news/detail/Hau-gian-cach-COVID-Bat-dong-san-nghi-duong-soi-dong-tro-lai-can-ho-bien-Nha-Trang-tang-nhiet-.html"><img
+                              src="./Giới thiệu - CÔNG TY CỔ PHẦN HƯNG THỊNH LAND_files/hung-thinh-land-2a139acc20fdb485.jpg"
+                              alt="Hậu giãn cách COVID: Bất động sản nghỉ dưỡng sôi động trở lại, căn hộ biển Nha Trang tăng nhiệt "
+                              width="600" height="400"></a>
+                          <div class="post-classic-panel group-middle justify-content-start">
+                            <div class="post-classic-time">
+                              <div class="unit unit-spacing-xs"> </div>
+                              <span class="icon fa fa-clock-o icon_time_news"></span>
+                              <time datetime="Ngày đăng: 18-05-2019"> Ngày đăng:
+                                14-12-2021</time>
+                            </div>
+                          </div>
+                          <h4 class="post-classic-title post-classic-title-home"><a
+                              href="https://www.hungthinhland.com.vn/news/detail/Hau-gian-cach-COVID-Bat-dong-san-nghi-duong-soi-dong-tro-lai-can-ho-bien-Nha-Trang-tang-nhiet-.html">Hậu
+                              giãn cách COVID: Bất động sản nghỉ dưỡng sôi động trở lại,
+                              căn hộ biển Nha Trang tăng nhiệt </a> </h4>
+                          <p></p>
+                        </article>
+                      </div>
+
+
+                      <div class="col-md-6 col-lg-6 col-xl-6">
+                        <div class="row">
+                          <div class="col-md-6 col-lg-6 col-xl-6">
+                            <article class="post post-classic"> <a class="post-classic-figure"
+                                href="https://www.hungthinhland.com.vn/news/detail/Dong-Nai-dau-tu-hon-1.000-ty-dong-xay-dung-duong-vanh-dai-tai-TP.-Bien-Hoa.html"><img
+                                  src="./Giới thiệu - CÔNG TY CỔ PHẦN HƯNG THỊNH LAND_files/hung-thinh-land-32836fdf58604912.webp"
+                                  alt="Đồng Nai đầu tư hơn 1.000 tỷ đồng xây dựng đường vành đai tại TP. Biên Hòa"
+                                  width="900" height="600"></a>
+                              <div class="post-classic-panel group-middle justify-content-start">
+                                <div class="post-classic-time">
+                                  <div class="unit unit-spacing-xs"> </div>
+                                  <span class="icon fa fa-clock-o icon_time_news"></span>
+                                  <time datetime="Ngày đăng: 18-05-2019"> Ngày đăng:
+                                    03-12-2021</time>
+                                </div>
+                              </div>
+                              <h4 class="post-classic-title"><a
+                                  href="https://www.hungthinhland.com.vn/news/detail/Dong-Nai-dau-tu-hon-1.000-ty-dong-xay-dung-duong-vanh-dai-tai-TP.-Bien-Hoa.html">Đồng
+                                  Nai đầu tư hơn 1.000 tỷ đồng xây dựng đường vành đai
+                                  tại TP. Biên Hòa</a> </h4>
+                            </article>
+                          </div>
+                          <div class="col-md-6 col-lg-6 col-xl-6">
+                            <article class="post post-classic"> <a class="post-classic-figure"
+                                href="https://www.hungthinhland.com.vn/news/detail/9-km-du-an-Vanh-dai-3-TP-HCM-sap-khoi-cong.html"><img
+                                  src="./Giới thiệu - CÔNG TY CỔ PHẦN HƯNG THỊNH LAND_files/hung-thinh-land-33189f887abb6803.jpg"
+                                  alt="9 km dự án Vành đai 3 TP HCM sắp khởi công" width="900" height="600"></a>
+                              <div class="post-classic-panel group-middle justify-content-start">
+                                <div class="post-classic-time">
+                                  <div class="unit unit-spacing-xs"> </div>
+                                  <span class="icon fa fa-clock-o icon_time_news"></span>
+                                  <time datetime="Ngày đăng: 18-05-2019"> Ngày đăng:
+                                    26-11-2021</time>
+                                </div>
+                              </div>
+                              <h4 class="post-classic-title"><a
+                                  href="https://www.hungthinhland.com.vn/news/detail/9-km-du-an-Vanh-dai-3-TP-HCM-sap-khoi-cong.html">9
+                                  km dự án Vành đai 3 TP HCM sắp khởi công</a> </h4>
+                            </article>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6 col-lg-6 col-xl-6">
+                            <article class="post post-classic"> <a class="post-classic-figure"
+                                href="https://www.hungthinhland.com.vn/news/detail/Vung-Tau-don-song-ti-USD-.html"><img
+                                  src="./Giới thiệu - CÔNG TY CỔ PHẦN HƯNG THỊNH LAND_files/hung-thinh-land-41a369798aa25447.jpg"
+                                  alt="Vũng Tàu đón sóng tỉ USD " width="900" height="600"></a>
+                              <div class="post-classic-panel group-middle justify-content-start">
+                                <div class="post-classic-time">
+                                  <div class="unit unit-spacing-xs"> </div>
+                                  <span class="icon fa fa-clock-o icon_time_news"></span>
+                                  <time datetime="Ngày đăng: 18-05-2019"> Ngày đăng:
+                                    22-10-2021</time>
+                                </div>
+                              </div>
+                              <h4 class="post-classic-title"><a
+                                  href="https://www.hungthinhland.com.vn/news/detail/Vung-Tau-don-song-ti-USD-.html">Vũng
+                                  Tàu đón sóng tỉ USD </a> </h4>
+                            </article>
+                          </div>
+                          <div class="col-md-6 col-lg-6 col-xl-6">
+                            <article class="post post-classic"> <a class="post-classic-figure"
+                                href="https://www.hungthinhland.com.vn/news/detail/Phe-duyet-nhiem-vu-dieu-chinh-quy-hoach-chung-Tp.HCM-den-nam-2040-tam-nhin-2060-.html"><img
+                                  src="./Giới thiệu - CÔNG TY CỔ PHẦN HƯNG THỊNH LAND_files/hung-thinh-land-008257e38cf2d481.jpg"
+                                  alt="Phê duyệt nhiệm vụ điều chỉnh quy hoạch chung Tp.HCM đến năm 2040, tầm nhìn 2060 "
+                                  width="900" height="600"></a>
+                              <div class="post-classic-panel group-middle justify-content-start">
+                                <div class="post-classic-time">
+                                  <div class="unit unit-spacing-xs"> </div>
+                                  <span class="icon fa fa-clock-o icon_time_news"></span>
+                                  <time datetime="Ngày đăng: 18-05-2019"> Ngày đăng:
+                                    02-10-2021</time>
+                                </div>
+                              </div>
+                              <h4 class="post-classic-title"><a
+                                  href="https://www.hungthinhland.com.vn/news/detail/Phe-duyet-nhiem-vu-dieu-chinh-quy-hoach-chung-Tp.HCM-den-nam-2040-tam-nhin-2060-.html">Phê
+                                  duyệt nhiệm vụ điều chỉnh quy hoạch chung Tp.HCM đến
+                                  năm 2040, tầm nhìn 2060 </a> </h4>
+                            </article>
+                          </div>
+                        </div>
+                      </div>
+
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <a class="button button-secondary button-ujarak wow fadeInUp"
+                href="https://www.hungthinhland.com.vn/news.html" data-wow-delay=".2s"
+                style="visibility: hidden; animation-delay: 0.2s; animation-name: none;">xem tất cả</a>
+            </div>
+          </section>
+
+    </div>
+
+    <%- include('../components/footer')%>
+  </body>
+
+  <%- include('../components/script') %>

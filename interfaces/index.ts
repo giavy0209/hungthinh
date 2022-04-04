@@ -1,0 +1,5 @@
+export {default as IPages} from './IPages'
+export {default as IBanners} from './IBanners'
+export {default as IUploads} from './IUploads'
+export {default as ICategories} from './ICategories'
+export {default as INews} from './INews'

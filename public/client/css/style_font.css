@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "utm_helvetinsregular";
+    src: url("../font/utm_helvetins-webfont.eot");
+    src: url("../font/utm_helvetins-webfont.eot?#iefix") format("embedded-opentype"),
+        url("../font/utm_helvetins-webfont.woff") format("woff"),
+        url("../font/utm_helvetins-webfont.ttf") format("truetype"),
+        url("../font/utm_helvetins-webfont.svg#utm_helvetinsregular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "utm_avo";
+    src: url("../font/utm_avo-webfont.eot");
+    src: url("../font/utm_avo-webfont.eot?#iefix") format("embedded-opentype"),
+        url("../font/utm_avo-webfont.woff") format("woff"), url("../font/utm_avo-webfont.ttf") format("truetype"),
+        url("../font/utm_avo-webfont.svg#utm_helvetinsregular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "utm_avobold";
+    src: url("../font/utm_avobold-webfont.eot");
+    src: url("../font/utm_avobold-webfont.eot?#iefix") format("embedded-opentype"),
+        url("../font/utm_avobold-webfont.woff") format("woff"),
+        url("../font/utm_avobold-webfont.ttf") format("truetype"),
+        url("../font/utm_avobold-webfont.svg#utm_helvetinsregular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,5 @@
+export {default as Pages} from './Pages'
+export {default as Banners} from './Banners'
+export {default as Uploads} from './Uploads'
+export {default as Categories} from './Categories'
+export {default as News} from './News'
