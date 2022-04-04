@@ -16,7 +16,7 @@ app.use('/',routers)
 app.set('view engine' , 'ejs')
 
 app.get('/admin' , (req,res) => {
-    res.sendFile(path.join(__dirname , 'views', 'admin', 'index.html'))
+    res.sendFile(path.join(__dirname , 'public', 'admin', 'index.html'))
 })
 
 const server = http.createServer(app)
