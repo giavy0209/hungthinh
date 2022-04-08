@@ -13,5 +13,10 @@ router.route('/api/news')
     await News.create({...req.body , slug : uslug(req.body.title) + Date.now()})
     res.send({status : 1})
 })
+.put(async (req,res) => {
+    const {_id} = req.query
+    await News.findByIdAndUpdate(_id , req.body)
+    res.send({status : 1})
+})
 
 export default router

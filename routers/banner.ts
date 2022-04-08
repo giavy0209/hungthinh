@@ -12,5 +12,9 @@ router.route('/api/banners')
     await Banners.create({...req.body})
     res.send({status : 1})
 })
-
+.put(async (req,res) => {
+    const {_id} = req.query
+    await Banners.findByIdAndUpdate(_id , req.body)
+    res.send({status : 1})
+})
 export default router
