@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import { Categories } from '../models'
-import uslug from 'uslug'
+import slug from 'slug'
 const router = Router()
 
 router.route('/api/categories')
@@ -11,7 +11,7 @@ router.route('/api/categories')
 })
 .post( async(req,res) => {
 
-    await Categories.create({...req.body , slug : uslug(req.body.title) + Date.now()})
+    await Categories.create({...req.body , slug : slug(req.body.title) + Date.now()})
     res.send({status : 1})
 })
 .put(async (req,res) => {

@@ -1,6 +1,7 @@
 import { Router } from 'express'
 import { Banners, Categories, News } from '../models'
-import uslug from 'uslug'
+import slug from 'slug'
+
 const router = Router()
 
 router.route('/api/news')
@@ -10,7 +11,7 @@ router.route('/api/news')
     res.send({status : 1 , data})
 })
 .post( async(req,res) => {
-    await News.create({...req.body , slug : uslug(req.body.title) + Date.now()})
+    await News.create({...req.body , slug : slug(req.body.title) + Date.now()})
     res.send({status : 1})
 })
 .put(async (req,res) => {
