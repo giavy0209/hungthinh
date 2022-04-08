@@ -108,5 +108,10 @@ router.route('/tin-tuc/:categoriesId/:newsId')
         const newsDetail = await getNew(newsId)
         res.render('client/pages/tin-tuc-detail', { news, project, allNews, newsDetail })
     })
+    .post(async(req,res)  => {
+        const body = req.body
+        console.log(body);
+        
+    })
 
 export default router
