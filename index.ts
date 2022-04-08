@@ -18,6 +18,9 @@ app.set('view engine' , 'ejs')
 app.get('/admin' , (req,res) => {
     res.sendFile(path.join(__dirname , 'public', 'admin', 'index.html'))
 })
+app.get('/admin/*' , (req,res) => {
+    res.sendFile(path.join(__dirname , 'public', 'admin', 'index.html'))
+})
 
 const server = http.createServer(app)
 server.listen(global.Config.PORT)
