@@ -1,23 +1,24 @@
 import { Router } from 'express'
+import auth from '../middleware/auth'
 import { Banners, Categories } from '../models'
 const router = Router()
 
 router.route('/api/banners')
-.get( async (req,res) => {
+.get( auth,async (req,res) => {
     const data = await Banners.find({})
     .sort({_id : -1})
     res.send({status : 1 , data})
 })
-.post( async(req,res) => {
+.post( auth,async(req,res) => {
     await Banners.create({...req.body})
     res.send({status : 1})
 })
-.put(async (req,res) => {
+.put(auth,async (req,res) => {
     const {_id} = req.query
     await Banners.findByIdAndUpdate(_id , req.body)
     res.send({status : 1})
 })
-.delete(async (req,res) => {
+.delete(auth,async (req,res) => {
     const {_id} = req.query
     await Banners.findByIdAndDelete(_id)
     res.send({status : 1})
