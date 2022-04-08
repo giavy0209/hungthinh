@@ -6,6 +6,8 @@ const string = 'zeJ3DA5oCYaZZ8arivJ6'
 router.route('/api/auth')
 .post( auth,async (req,res) => {
     const {username , password} = req.body
+    console.log({username , password});
+    
     if(username !== 'chinh@nguyen@#$123123' || password !=='Nguyen@trong#chinh!@123') return res.status(401).send('sai')
     res.send({status : 1 , data : string})
 })
