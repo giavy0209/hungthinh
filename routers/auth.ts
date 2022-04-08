@@ -4,7 +4,7 @@ import { Banners, Categories } from '../models'
 const router = Router()
 const string = 'zeJ3DA5oCYaZZ8arivJ6'
 router.route('/api/auth')
-.post( auth,async (req,res) => {
+.post( async (req,res) => {
     const {username , password} = req.body
     console.log({username , password});
     
