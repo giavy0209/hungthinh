@@ -49,6 +49,8 @@ router.route('/')
         const { news, project } = await getCategories()
         const newProject = await getNews({ categoriesType: 1, limit: 6 })
         const newNews = await getNews({ categoriesType: 2, limit: 5 })
+        console.log(newNews);
+        
         const banners = await getBanner()
         res.render('client/pages/index', { news, project, newProject, newNews, banners })
     })
