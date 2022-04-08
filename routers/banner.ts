@@ -17,4 +17,9 @@ router.route('/api/banners')
     await Banners.findByIdAndUpdate(_id , req.body)
     res.send({status : 1})
 })
+.delete(async (req,res) => {
+    const {_id} = req.query
+    await Banners.findByIdAndDelete(_id)
+    res.send({status : 1})
+})
 export default router

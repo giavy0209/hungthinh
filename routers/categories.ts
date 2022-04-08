@@ -19,4 +19,9 @@ router.route('/api/categories')
     await Categories.findByIdAndUpdate(_id , req.body)
     res.send({status : 1})
 })
+.delete(async (req,res) => {
+    const {_id} = req.query
+    await Categories.findByIdAndDelete(_id)
+    res.send({status : 1})
+})
 export default router
