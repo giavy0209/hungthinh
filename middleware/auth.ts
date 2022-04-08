@@ -1,9 +1,11 @@
 import { NextFunction, Request, Response } from "express";
-
+const string = 'zeJ3DA5oCYaZZ8arivJ6'
 const auth = (req : Request,res : Response ,next : NextFunction) => {
-    console.log(typeof req.headers.auth);
+    if(req.headers.authorization === string)next()
+    else {
+        res.status(401).send('dmm')
+    }
     
-    next()
 }
 
 export default auth
