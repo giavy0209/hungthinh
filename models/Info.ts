@@ -2,10 +2,10 @@ import {model, Schema, Types} from 'mongoose'
 import { IInfo } from 'interfaces'
 
 const InfoSchema = new Schema<IInfo>({
-    img : {type : String},
-    text : {type : String},
-    order : {type : Number},
-    link : {type : String}
+    name : String,
+    content : String,
+    email : String,
+    phone : String
 })
 
 const Banners = model<IInfo>('infos' , InfoSchema)

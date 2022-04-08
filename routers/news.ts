@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { Banners, Categories, News } from '../models'
+import { Banners, Categories, Info, News } from '../models'
 import slug from 'slug'
 
 const router = Router()
@@ -24,5 +24,12 @@ router.route('/api/news')
     await News.findByIdAndDelete(_id)
     res.send({status : 1})
 })
+
+router.route('/api/info')
+    .get(async (req,res) => {
+        const data = await Info.find({})
+        .sort({ _id : -1})
+        res.send({status : 1 , data})
+    })
 
 export default router

@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { Banners, Categories, News } from 'models'
+import { Banners, Categories, Info, News } from 'models'
 import path from 'path'
 const router = Router()
 
@@ -66,6 +66,12 @@ router.route('/lien-he')
         const { news, project } = await getCategories()
         res.render('client/pages/lien-he', { news, project, })
     })
+    .post(async(req,res)  => {
+        const body = req.body
+        console.log(body);
+        await Info.create({...req.body})
+        res.redirect('/lien-he')
+    })
 
 router.route('/doi-tac')
     .get(async (req, res) => {
@@ -108,10 +114,6 @@ router.route('/tin-tuc/:categoriesId/:newsId')
         const newsDetail = await getNew(newsId)
         res.render('client/pages/tin-tuc-detail', { news, project, allNews, newsDetail })
     })
-    .post(async(req,res)  => {
-        const body = req.body
-        console.log(body);
-        
-    })
+    
 
 export default router
