@@ -10,8 +10,7 @@
             <div class="rd-navbar-main-outer">
                 <div class="rd-navbar-main">
                     <div class="rd-navbar-panel">
-                        <div class="rd-navbar-brand"><a class="brand" href="/"><img
-                                    src="/client/images/logo.png" alt=""
+                        <div class="rd-navbar-brand"><a class="brand" href="/"><img src="/client/images/logo.png" alt=""
                                     width="190"></a></div>
                         <button class="rd-navbar-toggle toggle-original"
                             data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
@@ -23,8 +22,7 @@
                             <ul class="rd-navbar-nav">
                                 <li class="rd-nav-item active"><a class="rd-nav-link" href="/">Trang chủ</a>
                                 </li>
-                                <li class="rd-nav-item"><a class="rd-nav-link"
-                                        href="/gioi-thieu">Giới
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="/gioi-thieu">Giới
                                         thiệu</a>
                                 </li>
 
@@ -35,29 +33,32 @@
                                     <ul class="rd-menu rd-navbar-dropdown">
                                         <%project.forEach(el=>{%>
                                             <li class="rd-dropdown-item">
-                                                <a class="rd-dropdown-link" href="/du-an/<%=el.slug%>"><%=el.title%></a>
-                                            </li> 
-                                        <%})%>
-                                        
+                                                <a class="rd-dropdown-link" href="/du-an/<%=el.slug%>">
+                                                    <%=el.title%>
+                                                </a>
+                                            </li>
+                                            <%})%>
+
                                     </ul>
                                 </li>
 
 
 
                                 <li class="rd-nav-item rd-navbar--has-dropdown rd-navbar-submenu">
-                                    <a class="rd-nav-link"
-                                        href="/tin-tuc">Tin
+                                    <a class="rd-nav-link" href="/tin-tuc">Tin
                                         tức</a><span class="rd-navbar-submenu-toggle"></span>
                                     <span class="rd-navbar-submenu-toggle"></span>
                                     <ul class="rd-menu rd-navbar-dropdown">
-                                        
+
                                         <li class="rd-dropdown-item">
-                                            <%news.forEach(el => {%><a href="/tin-tuc/<%=el.slug%>"><%=el.title%></a><%})%>
+                                            <%news.forEach(el=> {%><a href="/tin-tuc/<%=el.slug%>">
+                                                    <%=el.title%>
+                                                </a>
+                                                <%})%>
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="rd-nav-item"><a class="rd-nav-link"
-                                        href="/doi-tac">Đối
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="/doi-tac">Đối
                                         tác</a> </li>
                                 <li class="rd-nav-item"><a class="rd-nav-link"
                                         href="https://www.hungthinhland.com.vn/contact.html">Liên
