@@ -25,8 +25,8 @@ const getNews = async ({ skip = 0, limit = 5, categories = '', categoriesType = 
         { $unwind: { path: '$categories' } },
         { $match: query },
         { $skip: skip },
+        { $sort: { _id: -1 } },
         { $limit: limit },
-        { $sort: { _id: -1 } }
     ])
     return news
 
