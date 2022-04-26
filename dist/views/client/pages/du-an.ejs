@@ -1,0 +1,44 @@
+<%- include('../components/head') %>
+
+    <body data-new-gr-c-s-check-loaded="14.1055.0" data-gr-ext-installed="" class="vsc-initialized">
+        <div class="page animated" style="animation-duration: 500ms;">
+            <%- include('../components/header') %>
+                <section class="breadcrumbs-custom-inset">
+                    <div class="breadcrumbs-custom context-dark">
+                        <div class="container">
+                            <h2 class="breadcrumbs-custom-title">Dự án</h2>
+                        </div>
+                        <div class="box-position"
+                            style="background-image: url(https://www.hungthinhland.com.vn/images/bg_duan.jpg);"></div>
+                    </div>
+                </section>
+                <section class="section section-sm bg-default">
+                    <div class="container">
+
+                        <div class="row row-50  wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+
+                            <%allNews.forEach(el => {%>
+                                <div class="col-sm-9 col-md-6 col-lg-5 col-xl-4 ">
+                                    <!-- Post Creative-->
+                                    <article class="post post-creative">
+                                        <div class="post-creative-header"> </div>
+                                        <a class="post-creative-figure"
+                                            href="/du-an/<%=el.categories.slug%>/<%=el.slug%>"><img
+                                                src="<%=el.thumbnail%>"
+                                                alt="<%=el.title%>" width="370" height="267"></a>
+                                        <div class="post-creative-footer">
+                                            <h5 class="post-creative-title"><a
+                                                    href="/du-an/<%=el.categories.slug%>/<%=el.slug%>"><%=el.title%></a></h5>
+                                        </div>
+                                    </article>
+                                </div>
+                                
+                            <%})%>
+
+                        </div>
+                    </div>
+                </section>
+        </div>
+        <%- include('../components/footer') %>
+    </body>
+    <%- include('../components/script') %>
