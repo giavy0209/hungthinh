@@ -9,6 +9,6 @@ var express_1 = require("express");
 var prefix = '/';
 var router = (0, express_1.Router)();
 var routes = fs_1.default.readdirSync(__dirname);
-routes.filter(function (o) { return o !== 'index.ts'; })
+routes.filter(function (o) { return !o.includes('index'); })
     .forEach(function (route) { return router.use(prefix, require(path_1.default.join(__dirname, route)).default); });
 exports.default = router;

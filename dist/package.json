@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx link-module-alias && nodemon index.ts",
+    "start": "npx link-module-alias && nodemon index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
