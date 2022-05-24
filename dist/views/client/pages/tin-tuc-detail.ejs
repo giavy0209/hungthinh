@@ -1,0 +1,58 @@
+<%- include('../components/head') %>
+
+    <body data-new-gr-c-s-check-loaded="14.1055.0" data-gr-ext-installed="" class="vsc-initialized">
+        <div class="page animated" style="animation-duration: 500ms;">
+            <%- include('../components/header') %>
+                <section class="breadcrumbs-custom-inset">
+                    <div class="breadcrumbs-custom context-dark">
+                        <div class="container">
+                            <h2 class="breadcrumbs-custom-title">Tin tức</h2>
+
+                        </div>
+                        <div class="box-position"
+                            style="background-image: url(https://www.hungthinhland.com.vn/images/bg_news.jpg);"></div>
+                    </div>
+                </section>
+                <section class="section section-sm bg-default">
+                    <div class="container">
+                        <div class="row row-70">
+                            <div class="col-lg-9">
+                                <div class="blog-post">
+                                    <!-- Post Classic-->
+                                    <article class="post post-classic">
+                                        <h4 class="post-classic-title post-classic-title-add"><%=newsDetail.title%></h4>
+                                        <p style="text-align:justify"><strong><%=newsDetail.meta%></strong></p>
+                                        <%-newsDetail.content%>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <!-- Post Sidebar-->
+                                <div class="post-sidebar post-sidebar-inset">
+                                    <div class="row row-lg">
+                                        <div class="col-sm-6 col-lg-12">
+                                            <div class="post-sidebar-item">
+                                                <h5 class="green">Tin khác</h5>
+                                                <div class="post-sidebar-item-inset">
+                                                   <%allNews.forEach(el=>{%>
+                                                    <article class="post post-minimal"><a class="post-minimal-figure"
+                                                            href="/tin-tuc/<%el.categories.slug%>/<%=el.slug%>"><img
+                                                                src="<%=el.thumbnail%>"
+                                                                alt="" width="232" height="138"></a>
+                                                        <p class="post-minimal-title"><a
+                                                                href="/tin-tuc/<%el.categories.slug%>/<%=el.slug%>"><%=el.title%></a></p>
+                                                    </article>
+                                                    <%})%>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        </div>
+        <%- include('../components/footer') %>
+    </body>
+    <%- include('../components/script') %>
